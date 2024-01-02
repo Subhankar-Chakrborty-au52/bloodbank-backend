@@ -15,8 +15,10 @@ app.get("/", (_req, res) => {
   res.send("Hey this is my API running 🥳");
 });
 
+const authRouter = require("./routes/authroutes");
+
 //routes
-app.use("/api/v1/auth", require("./routes/authroutes"));
+app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/inventory", require("./routes/inventoryRoutes"));
 app.use("/api/v1/analytics", require("./routes/analyticsRoutes"));
 app.use("/api/v1/admin", require("./routes/adminRoutes"));
