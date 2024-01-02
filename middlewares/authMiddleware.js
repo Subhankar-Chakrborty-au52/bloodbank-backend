@@ -4,7 +4,7 @@ const JWT = require("jsonwebtoken");
 module.exports = async (req, res, next) => {
   try {
     const token = req?.headers["authorization"]?.split(" ")[1];
-    JWT.verify(token, process.env.SECRET_KEY, (error, decode) => {
+    JWT.verify(token, "Hiremeplease", (error, decode) => {
       if (error) {
         res.status(401).send({
           success: false,
