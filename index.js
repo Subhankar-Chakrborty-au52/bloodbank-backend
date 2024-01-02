@@ -34,7 +34,7 @@ app.use("/api/v1/admin", require("./routes/adminRoutes"));
 // })
 
 // Port and Server starting
-const PORT = process.env.PORT;
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(
     `Node server running in ${process.env.DEV_MODE} Mode on Port ${process.env.PORT}`
