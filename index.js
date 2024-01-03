@@ -39,7 +39,7 @@ app.use("/api/v1/admin", adminRouter);
 // });
 
 // Port and Server starting
-const PORT = 4000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(
     `Node server running in ${process.env.DEV_MODE} Mode on Port ${process.env.PORT}`
