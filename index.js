@@ -16,12 +16,15 @@ app.get("/", (_req, res) => {
 });
 
 const authRouter = require("./routes/authroutes");
+const inventoryRouter = require("./routes/inventoryRoutes");
+const analyticsRouter = require("./routes/analyticsRoutes");
+const adminRouter = require("./routes/adminRoutes");
 
 //routes
 app.use("/api/v1/auth", authRouter);
-app.use("/api/v1/inventory", require("./routes/inventoryRoutes"));
-app.use("/api/v1/analytics", require("./routes/analyticsRoutes"));
-app.use("/api/v1/admin", require("./routes/adminRoutes"));
+app.use("/api/v1/inventory", inventoryRouter);
+app.use("/api/v1/analytics", analyticsRouter);
+app.use("/api/v1/admin", adminRouter);
 
 // // STATIC FOLDER
 // app.use(express.static(path.join(__dirname, "./client/build")));
